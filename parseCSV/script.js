@@ -66,7 +66,7 @@ function ArrayToCSV(arr) {
     csvData = new Blob([csvContent.replace('data:text/plain;charset=utf-8,', '')], { type: 'text/csv' }); 
     var csvUrl = URL.createObjectURL(csvData);
     // var encodedUri = encodeURI(csvContent);
-    window.open(csvUrl);
+    location.href = csvUrl;
 }
 function processData(arr) {
     var heads = arr[0];
